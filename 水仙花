@@ -1,0 +1,14 @@
+#include <stdio.h>
+#define cube(m)((m)*(m)*(m))//中间无空格
+void main(void)
+{
+	int n;
+	printf("输入数字");
+	scanf("%d",&n);
+	
+	if((cube(n%10) + cube(n/10 %10) + cube(n/100 %10)) == n)  //计算百位除100再%10 十位除10再%10 个位%10 
+	printf("%d是水仙花数\n",n);
+	else
+	printf("%d不是水仙花数\n",n);
+}
+ 
